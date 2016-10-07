@@ -20,7 +20,7 @@ def create():
     mysql.query_db(query, data)
     return_query = "SELECT * FROM posts"
     all_posts = mysql.query_db(return_query)
-    return render_template('/posts.html', all_posts = all_posts)
+    return render_template('posts.html', all_posts = all_posts)
 
 @app.route('/posts/index_json')
 def index_json():
